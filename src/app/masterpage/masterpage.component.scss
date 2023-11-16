@@ -1,0 +1,23 @@
+[main] {
+    min-height: 100%;
+}
+
+.drawer-container {
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.drawer-sidenav {
+    width: 200px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+}

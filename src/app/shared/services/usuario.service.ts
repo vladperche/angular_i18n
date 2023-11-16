@@ -19,6 +19,7 @@ export class UsuarioService {
         email: login.username + '@email.com'
       };
       localStorage.setItem('usuario', btoa(JSON.stringify(usuario)));
+      localStorage.setItem('token', btoa(Math.random().toString()));
       this.router.navigate(['']);
       return true;
     } else {

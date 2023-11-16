@@ -1,20 +1,45 @@
-<div>
-    Logo
-  </div>
-  <div>
-    <h1>Title</h1>
-  </div>
-  <div>
-    <h3>Links</h3>
-    <a routerLink="/Home">Home</a><br>
-    <a routerLink="/Groups">Groups</a><br>
-    <a routerLink="/User">Users</a><br>
-  </div>
-  <div>
-    <h3>Inner Component</h3>
-    <router-outlet></router-outlet>
-  </div>
-  <div>
+<main>
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>
+      Title
+    </span>
+    <span class="simple-spacer"></span>
+    <button mat-icon-button (click)="logout()">
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer class="drawer-sidenav" #drawer>
+      <mat-list>
+        <mat-list-item>
+          <a routerLink="/Home" (click)="drawer.close()">
+            <mat-icon>home</mat-icon>Home
+          </a><br>
+        </mat-list-item>
+        <mat-list-item>
+          <a routerLink="/Groups" (click)="drawer.close()">
+            <mat-icon>group</mat-icon>Groups
+          </a><br>
+        </mat-list-item>
+        <mat-list-item>
+          <a routerLink="/Users" (click)="drawer.close()">
+            <mat-icon>person</mat-icon>Users
+          </a><br>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+
+  <mat-toolbar color="accent" class="footer">
     <small>Footer</small>
-  </div>
-  
+  </mat-toolbar>
+</main>
