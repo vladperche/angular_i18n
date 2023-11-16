@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/material-design-icons/iconfont/material-icons.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
