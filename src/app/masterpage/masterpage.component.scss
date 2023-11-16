@@ -1,13 +1,19 @@
-[main] {
-    min-height: 100%;
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.drawer-renderer {
+    flex: 1 1 auto;
+    overflow: hidden;
 }
 
 .drawer-container {
     width: 100%;
-    min-height: 800px;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .drawer-sidenav {
@@ -17,7 +23,7 @@
     justify-content: center;
 }
 
+.header,
 .footer {
-    position: fixed;
-    bottom: 0px;
+    height: 60px;
 }

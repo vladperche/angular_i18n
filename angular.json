@@ -14,10 +14,22 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "pt" :{
+            "translation":"src/locale/messages.pt.json"
+          },
+          "es": {
+            "translation":"src/locale/messages.es.json"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
             "outputPath": "dist/angular-internationalization",
             "index": "src/index.html",
             "browser": "src/main.ts",

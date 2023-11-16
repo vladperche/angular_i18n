@@ -5,7 +5,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { UsuarioService } from '../shared/services/usuario.service';
 
@@ -20,7 +21,8 @@ import { UsuarioService } from '../shared/services/usuario.service';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   templateUrl: './masterpage.component.html',
   styleUrl: './masterpage.component.scss'

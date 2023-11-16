@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
   logar() {
     const usuarioLogin : IUsuarioLogin = this.formLogin.getRawValue();
     if(!this.usuarioService.login(usuarioLogin)){
-      this.snackBar.open("Invalid user!", null, {duration: 3000});
+      this.snackBar.open($localize `Invalid user!`, null, {duration: 3000});
     }
   }
 }

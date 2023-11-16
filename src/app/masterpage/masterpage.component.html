@@ -1,45 +1,47 @@
-<main>
-  <mat-toolbar color="primary">
+<div class="main">
+  <mat-toolbar color="primary" class="header">
     <button mat-icon-button (click)="drawer.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>
-      Title
+    <span i18n>
+      My Application
     </span>
     <span class="simple-spacer"></span>
-    <button mat-icon-button (click)="logout()">
-      <mat-icon>logout</mat-icon>
+    <button mat-icon-button (click)="logout()" matTooltip="Logout" i18n-matTooltip>
+      <mat-icon>exit_to_app</mat-icon>
     </button>
   </mat-toolbar>
 
-  <mat-drawer-container class="drawer-container">
-    <mat-drawer class="drawer-sidenav" #drawer>
-      <mat-list>
-        <mat-list-item>
-          <a routerLink="/Home" (click)="drawer.close()">
-            <mat-icon>home</mat-icon>Home
-          </a><br>
-        </mat-list-item>
-        <mat-list-item>
-          <a routerLink="/Groups" (click)="drawer.close()">
-            <mat-icon>group</mat-icon>Groups
-          </a><br>
-        </mat-list-item>
-        <mat-list-item>
-          <a routerLink="/Users" (click)="drawer.close()">
-            <mat-icon>person</mat-icon>Users
-          </a><br>
-        </mat-list-item>
-      </mat-list>
-    </mat-drawer>
+  <div class="drawer-renderer">
+    <mat-drawer-container class="drawer-container">
+      <mat-drawer class="drawer-sidenav" #drawer>
+        <mat-list>
+          <mat-list-item>
+            <a routerLink="/Home" (click)="drawer.close()">
+              <mat-icon>home</mat-icon><span i18n>Home</span>
+            </a><br>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="/Groups" (click)="drawer.close()">
+              <mat-icon>group</mat-icon><span i18n>Groups</span>
+            </a><br>
+          </mat-list-item>
+          <mat-list-item>
+            <a routerLink="/Users" (click)="drawer.close()">
+              <mat-icon>person</mat-icon><span i18n>Users</span>
+            </a><br>
+          </mat-list-item>
+        </mat-list>
+      </mat-drawer>
 
-    <div>
-      <router-outlet></router-outlet>
-    </div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
 
-  </mat-drawer-container>
+    </mat-drawer-container>
+  </div>
 
   <mat-toolbar color="accent" class="footer">
-    <small>Footer</small>
+    <small i18n>Footer Information</small>
   </mat-toolbar>
-</main>
+</div>
