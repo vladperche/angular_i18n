@@ -22,6 +22,12 @@
           },
           "es": {
             "translation":"src/locale/messages.es.json"
+          },
+          "es-AR": {
+            "translation":"src/locale/messages.es-AR.json"
+          },
+          "es-MX": {
+            "translation":"src/locale/messages.es-MX.json"
           }
         }
       },

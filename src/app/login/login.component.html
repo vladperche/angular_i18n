@@ -1,6 +1,10 @@
 <mat-card-content class="container">
   <mat-card class="card-login">
-    <mat-card-title>Login</mat-card-title>
+    <mat-card-title>
+      <span i18n>Login</span>
+      <span class="simple-spacer"></span>
+      <app-select-flag></app-select-flag>
+    </mat-card-title>
     <form [formGroup]="formLogin" novalidate>
       <mat-card-content class="conteudo-login">
         <mat-form-field appearance="outline" class="form-field-full">

@@ -1,0 +1,10 @@
+<mat-select class="flag-container" [(value)]="selectedFlag" (selectionChange)="FlagOnClick()">
+    <mat-select-trigger class="flag-option">
+        <img src="./assets/flags/{{selectedFlag}}.png">
+    </mat-select-trigger>
+    @for(flag of flags; track flag){
+        <mat-option [value]="flag.code" class="flag-option">
+            <img src="./assets/flags/{{flag.code}}.png" matTooltip={{flag.description}}>
+        </mat-option>
+    }
+</mat-select>

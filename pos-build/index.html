@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            let currLocale = window.navigator.language;
+            let hasFound = false;
+            while(!hasFound){
+                if (['pt','en-US','es','es-AR','es-MX'].indexOf(currLocale) >= 0) {
+                    hasFound = true;
+                    window.location.href = `/${currLocale}`;
+                }
+                else
+                {
+                    let locales = currLocale.split('-');
+                    currLocale = locales.splice(0, locales.length-1).join('-');
+
+                    if(currLocale.length = 0){
+                        hasFound = true;
+                        window.location.href = `/pt`;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Aguarde redirecionamento...</h3>
+    </body>
+</html>

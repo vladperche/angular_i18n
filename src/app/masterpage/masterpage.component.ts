@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { UsuarioService } from '../shared/services/usuario.service';
+import { SelectFlagComponent } from '../shared/components/select-flag/select-flag.component';
 
 @Component({
   selector: 'app-masterpage',
@@ -22,7 +23,8 @@ import { UsuarioService } from '../shared/services/usuario.service';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    SelectFlagComponent
   ],
   templateUrl: './masterpage.component.html',
   styleUrl: './masterpage.component.scss'

@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { UsuarioService } from '../shared/services/usuario.service';
 import { IUsuarioLogin } from '../shared/interfaces/usuario';
+import { SelectFlagComponent } from '../shared/components/select-flag/select-flag.component';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,8 @@ import { IUsuarioLogin } from '../shared/interfaces/usuario';
     MatCardModule, 
     MatInputModule,
     MatFormFieldModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SelectFlagComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
