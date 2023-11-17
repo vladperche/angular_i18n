@@ -33,6 +33,7 @@ export class LocaleService {
 
   setLocale(locale:string){
     localStorage.setItem('locale',locale);
+    window.location.href = `/${locale}/${window.location.hash}`;
   }
 
   getLocale():string{

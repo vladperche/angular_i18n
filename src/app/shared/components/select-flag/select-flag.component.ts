@@ -36,6 +36,5 @@ export class SelectFlagComponent {
 
   FlagOnClick(){
     this.localeService.setLocale(this.selectedFlag);
-    window.location.href = `/${this.selectedFlag}`;
   }
 }
